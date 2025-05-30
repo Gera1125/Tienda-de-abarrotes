@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel del Vendedor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Iconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+  /* Mostrar siempre el botón hamburguesa */
+  .sidenav-trigger {
+    display: inline-block !important;
+  }
+
+  @media (min-width: 993px) {
+    .sidenav-trigger {
+      display: inline-block !important;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="blue">
+  <div class="nav-wrapper">
+    <a href="#" data-target="menu" class="sidenav-trigger left">
+      <i class="material-icons">menu</i>
+    </a>
+    <a href="#" class="brand-logo center">Tienda Abarrotes</a>
+  </div>
+</nav>
+  <!-- Menú lateral -->
+  <ul class="sidenav" id="menu">
+  <li><a href="#"><i class="material-icons">home</i>Inicio</a></li>
+  <li><a href="php/inventario.php"><i class="material-icons">inventory</i>Inventario</a></li>
+  <li><a href="php/registrar_venta.php"><i class="material-icons">shopping_cart</i>Registrar venta</a></li>
+  <li><a href="php/historial_ventas.php"><i class="material-icons">history</i>Historial de ventas</a></li>
+  <li><a href="php/logout.php"><i class="material-icons">exit_to_app</i>Cerrar sesión</a></li>
+</ul>
+
+
+  <!-- Contenido principal -->
+  <div class="container" style="margin-top: 30px;">
+    <h4>Bienvenido, Vendedor</h4>
+    <p>Desde este panel podrás gestionar el inventario y registrar ventas.</p>
+
+    <!-- Ejemplo de tarjeta -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card green lighten-4">
+          <div class="card-content">
+            <span class="card-title">Inventario</span>
+            <p>Accede al inventario para consultar, agregar o editar productos.</p>
+          </div>
+          <div class="card-action">
+            <a href="php/inventario.php">Ir al inventario</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card yellow lighten-4">
+          <div class="card-content">
+            <span class="card-title">Registrar venta</span>
+            <p>Ingresa una nueva venta y actualiza el inventario automáticamente.</p>
+          </div>
+          <div class="card-action">
+            <a href="php/registrar_venta.php">Registrar venta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+  });
+</script>
+
+</body>
+</html>
